@@ -101,6 +101,6 @@ Este projeto realiza um pipeline completo de **engenharia de dados exploratória
 
 ## 👤 Autor
 
-**[Seu Nome]**  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Conectar-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/seu-perfil/)
-[![GitHub](https://img.shields.io/badge/GitHub-Portf%C3%B3lio-181717?logo=github&logoColor=white)](https://github.com/seu-usuario)
+**[Felipe Soares Oliveira]**  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Conectar-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/felipe-soares-oliveira-7101a213b/)
+[![GitHub](https://img.shields.io/badge/GitHub-Portf%C3%B3lio-181717?logo=github&logoColor=white)](https://github.com/felipesoares-dados)
