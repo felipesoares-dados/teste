@@ -1,0 +1,2 @@
+# Faz o GitHub contabilizar o código Python (e não os notebooks) na barra de linguagens
+*.ipynb linguist-documentation

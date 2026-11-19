@@ -1,3 +1,10 @@
+"""Funções estatísticas de apoio usadas no notebook 02.
+
+Cada função de teste recebe um DataFrame em que cada coluna é um grupo
+(por exemplo, uma coluna para quem tem diabetes e outra para quem não tem),
+executa o teste e imprime a conclusão com base no nível de significância `alfa`.
+"""
+
 from scipy.stats import (
     levene,
     mannwhitneyu,
@@ -6,6 +13,11 @@ from scipy.stats import (
 
 
 def analise_levene(dataframe, alfa=0.05, centro="mean"):
+    """Teste de Levene: verifica se as variâncias dos grupos (colunas) são iguais.
+
+    H0: as variâncias são iguais. `centro` pode ser "mean", "median" ou "trimmed";
+    "median" é mais robusto para dados assimétricos.
+    """
     print("Teste de Levene")
     
     estatistica_levene, valor_p_levene = levene(
@@ -26,6 +38,10 @@ def analise_mannwhitneyu(
     alfa=0.05,
     alternativa="two-sided",
 ):
+    """Teste de Mann-Whitney U: compara dois grupos sem exigir normalidade.
+
+    H0: as distribuições dos dois grupos são iguais.
+    """
 
     print("Teste de Mann-Whitney")
     estatistica_mw, valor_p_mw = mannwhitneyu(
@@ -47,6 +63,11 @@ def analise_ttest_ind(
     variancias_iguais=True,
     alternativa="two-sided",
 ):
+    """Teste t para duas amostras independentes (Student ou Welch).
+
+    H0: as médias dos dois grupos são iguais. Use `variancias_iguais=False`
+    para o teste de Welch, quando o Levene indicar variâncias diferentes.
+    """
     print("Teste t de Student")
     estatistica_ttest, valor_p_ttest = ttest_ind(
         *[dataframe[coluna] for coluna in dataframe.columns], 
